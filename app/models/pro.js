@@ -1,6 +1,10 @@
-import DS from 'ember-data';
-const { Model } = DS;
+import Model from '@ember-data/model';
+import { attr } from '@ember-data/model';
+import { decorator as commentable } from './commentable';
 
-export default Model.extend({
+@commentable
+class Pro extends Model {
+  @attr('string') name
+}
 
-});
+export default Pro;
